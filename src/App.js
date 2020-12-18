@@ -1,4 +1,5 @@
 import './App.css';
+import frog from "./nedladdning.jpg"; 
 
 function Header (props) {
   return (
@@ -14,6 +15,7 @@ function Main (props) {
       <p>
         We serve the most {props.adjective} food around!
       </p>
+      <img src={frog} height={200} alt="Frog singing" />
       <ul style={{textAlign: "left"}}>
         {props.dishes.map((dish) => (
         <li key={dish.id}>{dish.title}</li>
