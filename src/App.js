@@ -52,7 +52,7 @@ const dishObjects = dishes.map((dish, i) => ({id:i, title:dish}));
 // }
 
 
-function App() {
+function App({login}) {
 
   const [emotion, setEmotion] = useState("happy"); 
   const [secondary, setSecondary] = useState("tired"); 
@@ -69,9 +69,15 @@ function App() {
     (checked) => !checked, 
     false
     );
+  
 
   return (
     <>
+    
+    <h1 style= {{color: "blue"}}>This page is just to try out different 
+      techniques in React. Please ignore the poor design
+      and bad content. It's just a sandbox...
+    </h1>
       {/* Kitchen Part */}
       <div className="App">
         <Header name="Mattias" />
@@ -96,7 +102,8 @@ function App() {
       />
       <p>{checked ? "checked" : "not checked"}</p>
     </>  
-    );   
+    ); 
+     
              
     // if (props.authorized){
     //   return <SecretComponent />
